@@ -97,7 +97,7 @@
                 <a href="{{ route('corporation.index') }}">Corporation</a>
               </li>
               <li>
-                <a href="Zonelist.html">Zone</a>
+                <a href="{{ route('zone.index') }}">Zone</a>
               </li>
               <li>
                 <a href="Wardlist.html">Ward</a>
