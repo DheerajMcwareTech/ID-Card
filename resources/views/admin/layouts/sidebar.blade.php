@@ -100,7 +100,7 @@
                 <a href="{{ route('zone.index') }}">Zone</a>
               </li>
               <li>
-                <a href="Wardlist.html">Ward</a>
+                <a href="{{ route('ward.index') }}">Ward</a>
               </li>
               <li>
                 <a href="userslist.html">Users</a>
