@@ -103,7 +103,7 @@
                 <a href="{{ route('ward.index') }}">Ward</a>
               </li>
               <li>
-                <a href="userslist.html">Users</a>
+                <a href="{{ route('user.index') }}">Users</a>
               </li>
               <li>
                 <a href="servicetypelist.html">Service Type</a>

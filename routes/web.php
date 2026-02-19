@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CorporationController;
 use App\Http\Controllers\ZoneController;
 use App\Http\Controllers\WardController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -17,5 +18,6 @@ Route::group(['middleware' => ['auth']], function () {
       'corporation'                     => CorporationController::class,
       'zone'                            => ZoneController::class,
       'ward'                            => WardController::class,
+      'user'                            => UserController::class,
     ]);
 });
