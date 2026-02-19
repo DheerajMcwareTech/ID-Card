@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CorporationController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -9,7 +10,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
-
-  Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+    Route::resources([
+      'corporation'                     => CorporationController::class
+    ]);
 });

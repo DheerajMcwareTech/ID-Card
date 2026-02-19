@@ -26,7 +26,7 @@
             </div>
           </li>
           <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title link-nav active" href="dashboard.html">
+            <a class="sidebar-link sidebar-title link-nav active" href="{{ route('dashboard') }}">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
                   <g>
@@ -94,7 +94,7 @@
             </a>
             <ul class="sidebar-submenu">
               <li>
-                <a href="Corporationlist.html">Corporation</a>
+                <a href="{{ route('corporation.index') }}">Corporation</a>
               </li>
               <li>
                 <a href="Zonelist.html">Zone</a>

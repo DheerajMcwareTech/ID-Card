@@ -43,12 +43,11 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/responsive.css')}}">
     <style>
-        
-
         .footer {
             margin-left: 0px !important;
         }
     </style>
+      @yield('style')
 </head>
 
 <body>
@@ -94,7 +93,7 @@
   <script src="{{ asset('/assets/js/theme-customizer/customizer.js')}}"></script>
   <!-- login js-->
   <!-- Plugin used-->
-
+  @yield('script')
 </body>
 
 </html>
