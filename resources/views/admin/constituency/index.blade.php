@@ -64,14 +64,14 @@
       <div class="page-title">
           <div class="row">
               <div class="col-12 col-sm-6">
-                  <h3 style="color: #1e2f65;font-family: sans-serif;">Ward List</h3>
+                  <h3 style="color: #1e2f65;font-family: sans-serif;">Constituency List</h3>
               </div>
               <div class="col-12 col-sm-6">
                   <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a>
                       </li>
 
-                      <li class="breadcrumb-item active">Ward List</li>
+                      <li class="breadcrumb-item active">Constituency List</li>
                   </ol>
               </div>
           </div>
@@ -86,7 +86,7 @@
                       <div class="d-flex justify-content-between align-items-center mb-4">
                           <h4 class="mb-0 add"></h4>
                           <button class="btn btn-primary">
-                              <a href="{{ route('ward.create') }}" style="color: white;">
+                              <a href="{{ route('constituency.create') }}" style="color: white;">
                                   <i class="bi bi-plus-circle me-1"></i>
                                   Add 
                               </a>
@@ -104,9 +104,6 @@
                                       <th>Zone(Kan)</th>
                                       <th>Constituency(Eng)</th>
                                       <th>Constituency(Kan)</th>
-                                      <th>Ward(Eng)</th>
-                                      <th>Ward(Kan)</th>
-                                      <th>Ward Number</th>
                                       <th>Status</th>
                                       <th>Actions</th>
                                   </tr>
@@ -119,11 +116,8 @@
                                       <td>{{$entry->corporation?->name_kn}}</td>
                                       <td>{{$entry->zone?->name}}</td>
                                       <td>{{$entry->zone?->name_kn}}</td>
-                                      <td>{{$entry->constituency?->name}}</td>
-                                      <td>{{$entry->constituency?->name_kn}}</td>
                                       <td>{{$entry->name}}</td>
                                       <td>{{$entry->name_kn}}</td>
-                                      <td>{{$entry->number}}</td>
                                       <td>
                                           <label class="switch">
                                               <input type="checkbox" {{ $entry->status ? 'checked' : ''}}>
@@ -132,11 +126,11 @@
                                       </td>
                                       <td>
                                           <a class="btn btn-sm btn-info me-2" title="View"
-                                              href="{{ route('ward.show', $entry->id) }}">
+                                              href="{{ route('constituency.show', $entry->id) }}">
                                               <i class="bi bi-eye"></i>
                                           </a>
                                           <a class="btn btn-sm btn-primary me-2" title="Edit"
-                                              href="{{ route('ward.edit', $entry->id) }}">
+                                              href="{{ route('constituency.edit', $entry->id) }}">
                                               <i class="bi bi-pencil-square"></i>
                                           </a>
 

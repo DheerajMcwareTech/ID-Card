@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ward extends Model
+class Constituency extends Model
 {
-  protected $fillable = ['corporation_id','zone_id','constituency_id','name','name_kn','status','number'];
+    protected $fillable = ['corporation_id','zone_id','name','name_kn','status'];
 
   public function corporation(){
     return $this->belongsTo(Corporation::class);
@@ -14,9 +14,5 @@ class Ward extends Model
 
   public function zone(){
     return $this->belongsTo(Zone::class);
-  }
-
-  public function constituency(){
-    return $this->belongsTo(Constituency::class);
   }
 }

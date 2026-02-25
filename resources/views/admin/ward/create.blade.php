@@ -51,6 +51,12 @@
                                           <option value="">Choose Zone</option>
                                       </select>
                                   </div>
+                                  <div class="mb-3">
+                                      <label class="form-label fw-bold">Select Constituency</label>
+                                      <select class="form-select w-100" name="constituency_id" id="consSelect" required>
+                                          <option value="">Choose Constituency</option>
+                                      </select>
+                                  </div>
 
                                   <div class="mb-3">
                                       <label class="form-label fw-bold">Ward Name (English)</label>
@@ -80,6 +86,11 @@
                                   <div class="mb-3">
                                       <label>Zone Name (Kannada)</label>
                                       <input type="text" class="form-control" id="Zone_name_kn"
+                                          readonly>
+                                  </div>
+                                  <div class="mb-3">
+                                      <label>Constituency Name (Kannada)</label>
+                                      <input type="text" class="form-control" id="cons_name_kn"
                                           readonly>
                                   </div>
                                   <div class="mb-3">
@@ -131,7 +142,7 @@
             $.ajax({
               method: "POST",
               url: "{{ route('ward.store') }}",
-              data: {_token: "{{csrf_token()}}", id: selectedValue}, 
+              data: {_token: "{{csrf_token()}}", id: selectedValue, list:'zones'}, 
             })
             .done(function (res) {
               if(res.success){
@@ -160,6 +171,42 @@
 
             if (zoneMap[selectedValue]) {
                 kannadaInput.value = zoneMap[selectedValue];
+            } else {
+                kannadaInput.value = "";
+            }
+
+            $.ajax({
+              method: "POST",
+              url: "{{ route('ward.store') }}",
+              data: {_token: "{{csrf_token()}}", id: selectedValue, list:'cons'}, 
+            })
+            .done(function (res) {
+              if(res.success){
+                var options = '';
+                $.each(res.list, function(key, value){
+                    options += '<option value="' + value.id + '">' + value.name + '</option>';
+                });
+                options = '<option value="">Choose Constituency</option>' + options;
+                $('#consSelect').html(options);
+              }
+            })
+            .fail(function (err) {
+              console.log(err);              
+            });
+        });
+
+        const consMap = {
+            @foreach($constituencies as $zone)
+              "{{$zone->id}}": "{{$zone->name_kn}}",
+            @endforeach
+        };
+
+        document.getElementById("consSelect").addEventListener("change", function () {
+            const selectedValue = this.value;
+            const kannadaInput = document.getElementById("cons_name_kn");
+
+            if (zoneMap[selectedValue]) {
+                kannadaInput.value = consMap[selectedValue];
             } else {
                 kannadaInput.value = "";
             }

@@ -6,7 +6,7 @@
         <img class="img-fluid for-light" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
         <img class="img-fluid for-dark" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
       </a>
-      <h3 class="mb-0 ms-1 fw-bold">JANA MITHRA</h3>
+      <h3 class="mb-0 ms-1 fw-bold">Project Management</h3>
       <div class="back-btn ms-3">
         <i class="fa fa-angle-left"></i>
       </div>
@@ -100,13 +100,13 @@
                 <a href="{{ route('zone.index') }}">Zone</a>
               </li>
               <li>
+                <a href="{{ route('constituency.index') }}">Constituency</a>
+              </li>
+              <li>
                 <a href="{{ route('ward.index') }}">Ward</a>
               </li>
               <li>
                 <a href="{{ route('user.index') }}">Users</a>
-              </li>
-              <li>
-                <a href="servicetypelist.html">Service Type</a>
               </li>
             </ul>
           </li>

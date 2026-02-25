@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ward;
 use App\Models\Zone;
 use App\Models\Corporation;
+use App\Models\Constituency;
 use Illuminate\Http\Request;
 
 class WardController extends Controller
@@ -14,7 +15,7 @@ class WardController extends Controller
      */
     public function index()
     {
-      $entries = Ward::with('corporation','zone')->get();
+      $entries = Ward::with('corporation','zone','constituency')->get();
         return view('admin.ward.index', compact('entries'));
     }
 
@@ -25,7 +26,8 @@ class WardController extends Controller
     {
       $corporations = Corporation::get();
       $zones = Zone::get();
-        return view('admin.ward.create', compact('corporations','zones'));
+      $constituencies = Constituency::get();
+        return view('admin.ward.create', compact('corporations','zones','constituencies'));
     }
 
     /**
@@ -34,7 +36,10 @@ class WardController extends Controller
     public function store(Request $request)
     {
         if($request->ajax()){
-          $list = Zone::select('id', 'name')->where('corporation_id', $request->id)->get();
+          if($request->list == 'zones')
+            $list = Zone::select('id', 'name')->where('corporation_id', $request->id)->get();
+          else if($request->list == 'cons')
+            $list = Constituency::select('id', 'name')->where('zone_id', $request->id)->get();
           return response()->json(['success' => true, 'list' => $list]);
         }
         $data = $request->except('_token');
@@ -56,8 +61,9 @@ class WardController extends Controller
     public function edit(Ward $ward)
     {
       $corporations = Corporation::get();
-      $zones = Zone::where('corporation_id', $ward->corporation_id)->get();
-        return view('admin.ward.edit', compact('ward', 'corporations', 'zones'));
+      $zones = Zone::get();
+      $constituencies = Constituency::get();
+        return view('admin.ward.edit', compact('ward', 'corporations', 'zones','constituencies'));
     }
 
     /**
