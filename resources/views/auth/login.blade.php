@@ -12,7 +12,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="{{ asset('/assets/images/BBMPlogo.png')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('/assets/images/BBMPlogo.png')}}" type="image/x-icon">
-    <title>Admin Login | JANA MITHRA</title>
+    <title>UTCS | Urban Tree Census System</title>
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/vendors/bootstrap.css')}}">
     <!-- App css-->
@@ -51,7 +51,7 @@
                                     <div class="d-flex flex-row gap-1 align-items-center justify-content-center">
                                         <img src="{{ asset('/assets/images/BBMPlogo.png')}}" width="15%;" alt="">
                                         <h6 class="text-dark fw-bold text-center">
-                                            JANA MITHRA
+                                            Urban Tree Census System(UTCS)
                                         </h6>
                                         <img src="{{ asset('/assets/images/logo/logo-icon.jpg')}}" width="15%;" alt="">
                                     </div>

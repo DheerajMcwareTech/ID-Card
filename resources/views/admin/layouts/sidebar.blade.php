@@ -6,7 +6,7 @@
         <img class="img-fluid for-light" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
         <img class="img-fluid for-dark" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
       </a>
-      <h3 class="mb-0 ms-1 fw-bold">Project Management</h3>
+      <h3 class="mb-0 ms-1 fw-bold">UTCS</h3>
       <div class="back-btn ms-3">
         <i class="fa fa-angle-left"></i>
       </div>
@@ -54,23 +54,7 @@
                   </g>
                 </g>
               </svg>
-              <span>Street Details</span>
-            </a>
-          </li>
-          <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title link-nav" href="nearbyservices.html">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <g>
-                    <path d="M8.54248 9.21777H15.3975" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M11.9702 2.5C5.58324 2.5 4.50424 3.432 4.50424 10.929C4.50424 19.322 4.34724 21.5 5.94324 21.5C7.53824 21.5 10.1432 17.816 11.9702 17.816C13.7972 17.816 16.4022 21.5 17.9972 21.5C19.5932 21.5 19.4362 19.322 19.4362 10.929C19.4362 3.432 18.3572 2.5 11.9702 2.5Z"
-                      stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                </g>
-              </svg>
-              <span>NearBy Services</span>
+              <span>Tree Census</span>
             </a>
           </li>
           <li class="sidebar-list">
