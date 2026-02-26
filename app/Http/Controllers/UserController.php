@@ -64,6 +64,7 @@ class UserController extends Controller
     {
         $data = $request->except('_token','_method','password','wards');
         $data['ward_ids'] = implode(',',$request->wards);
+        $data['role'] = 2;
         if($request->password)
         $data['password'] = Hash::make($request->password);
         $user->update($data);

@@ -26,6 +26,7 @@ class User extends Authenticatable
         'ward_ids',
         'email',
         'password',
+        'role',
     ];
 
     /**
