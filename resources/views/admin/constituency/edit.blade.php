@@ -128,7 +128,7 @@
             $.ajax({
               method: "POST",
               url: "{{ route('ward.store') }}",
-              data: {_token: "{{csrf_token()}}", id: selectedValue}, 
+              data: {_token: "{{csrf_token()}}", id: selectedValue, list:'zones'}, 
             })
             .done(function (res) {
               if(res.success){
