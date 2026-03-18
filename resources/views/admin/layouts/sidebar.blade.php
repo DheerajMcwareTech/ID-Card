@@ -6,7 +6,7 @@
         <img class="img-fluid for-light" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
         <img class="img-fluid for-dark" src="{{ asset('/assets/images/BBMPlogo.png')}}" alt="">
       </a>
-      <h3 class="mb-0 ms-1 fw-bold">UTCS</h3>
+      <h3 class="mb-0 ms-1 fw-bold">ID Card</h3>
       <div class="back-btn ms-3">
         <i class="fa fa-angle-left"></i>
       </div>
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title link-nav" href="street-details.html">
+            <a class="sidebar-link sidebar-title link-nav" href="">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
                   <g>
@@ -54,7 +54,7 @@
                   </g>
                 </g>
               </svg>
-              <span>Tree Census</span>
+              <span>ID Cards</span>
             </a>
           </li>
           <li class="sidebar-list">
@@ -91,6 +91,9 @@
               </li>
               <li>
                 <a href="{{ route('user.index') }}">Users</a>
+              </li>
+              <li>
+                <a href="{{ route('department.index') }}">Department</a>
               </li>
             </ul>
           </li>

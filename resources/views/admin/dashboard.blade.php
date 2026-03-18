@@ -33,7 +33,7 @@
                                     <div class="card-body">
                                         <div class="media static-widget">
                                             <div class="media-body">
-                                                <h6 class="font-roboto">Total Trees</h6>
+                                                <h6 class="font-roboto">Total Departments</h6>
                                                 <h4 class="mb-0 counter">10</h4>
                                             </div>
                                             <i class="bi bi-tree-fill" style="font-size: x-large;"></i>
@@ -55,7 +55,7 @@
                                     <div class="card-body">
                                         <div class="media static-widget">
                                             <div class="media-body">
-                                                <h6 class="font-roboto">QR Code Generated</h6>
+                                                <h6 class="font-roboto">Total Designations</h6>
                                                 <h4 class="mb-0 counter">9</h4>
                                             </div>
                                             <i data-feather="grid" class="feather-icon"></i>
