@@ -95,6 +95,9 @@
               <li>
                 <a href="{{ route('department.index') }}">Department</a>
               </li>
+              <li>
+                <a href="{{ route('designation.index') }}">Designation</a>
+              </li>
             </ul>
           </li>
       </div>

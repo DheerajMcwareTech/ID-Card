@@ -7,6 +7,7 @@ use App\Http\Controllers\ConstituencyController;
 use App\Http\Controllers\WardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DesignationController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -23,6 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
       'ward'                            => WardController::class,
       'user'                            => UserController::class,
       'department'                      => DepartmentController::class,
+      'designation'                     => DesignationController::class,
     ]);
 });
 
